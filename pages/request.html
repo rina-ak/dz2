@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>K-POP Campus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="request">
+    <header class="shadow-sm mb-4">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="../index.html">K-POP Campus</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="labs.html">Студии</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Проекты и мерч</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="request.html"><b>Заявка</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mb-5">
+      <h1 class="mb-4">Заявка в K-POP Campus</h1>
+
+      <p class="mb-2">
+        Эта форма для тех, кто хочет попасть в студии кампуса, сборные команды
+        или участие в шоукейсе.
+      </p>
+      <p class="mb-3">
+        Все поля обязательны, чтобы куратор мог связаться с тобой и предложить
+        подходящее направление.
+      </p>
+
+      <form class="row g-3" method="post" action="https://httpbin.org/post">
+        <div class="col-md-6">
+          <label for="studentName" class="form-label">ФИО</label>
+          <input
+            type="text"
+            class="form-control"
+            id="studentName"
+            name="student_name"
+            value="Кузнецова Арина"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="studentGroup" class="form-label">Группа или курс</label>
+          <input
+            type="text"
+            class="form-control"
+            id="studentGroup"
+            name="student_group"
+            value="БП24ДЗ09"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="studentAge" class="form-label">Возраст</label>
+          <input
+            type="number"
+            class="form-control"
+            id="studentAge"
+            name="student_age"
+            min="12"
+            value="16"
+            max="80"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label d-block"
+            >Предпочтительное направление в кампусе</label
+          >
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="track"
+              id="trackDance"
+              value="dance"
+              checked
+              required
+            />
+            <label class="form-check-label" for="trackDance">
+              Танцевальная студия
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="track"
+              id="trackVocal"
+              value="vocal"
+            />
+            <label class="form-check-label" for="trackVocal">
+              Вокал и запись каверов
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="track"
+              id="trackMedia"
+              value="media"
+            />
+            <label class="form-check-label" for="trackMedia">
+              Медиалаб и контент
+            </label>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="projectIdea" class="form-label">
+            Кратко опиши, чем хочешь заниматься в кампусе
+          </label>
+          <textarea
+            id="projectIdea"
+            class="form-control"
+            name="project_idea"
+            rows="4"
+            placeholder="Хочу танцевать в кавер команде, участвовать в съемках клипов и вести фан-контент"
+            required
+          ></textarea>
+        </div>
+
+        <div class="col-md-6">
+          <label for="contactEmail" class="form-label">Электронная почта</label>
+          <input
+            type="email"
+            class="form-control"
+            id="contactEmail"
+            name="contact_email"
+            value="example@mail.ru"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="contactPhone" class="form-label">Телефон для связи</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="contactPhone"
+            name="contact_phone"
+            value="+79001234567"
+            required
+          />
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn">Отправить заявку</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="bg-dark text-light py-3 mt-auto">
+      <div class="container text-center">
+        <small>K-POP Campus<br />© 2025. Все права защищены.</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

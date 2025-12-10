@@ -1,0 +1,82 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: #3a0024;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+.project-card img {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.figure-caption {
+  font-size: 0.9rem;
+  color: #b02d73;
+}
+
+form .form-label {
+  font-weight: 500;
+}
+
+.navbar-dark.bg-dark,
+footer.bg-dark {
+  background-color: #ff5fa8 !important;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link,
+footer.bg-dark,
+footer.bg-dark small {
+  color: #fff0fa !important;
+}
+
+.navbar-dark .nav-link.active {
+  color: #ffd0ec !important;
+}
+
+a,
+.page-nav a {
+  color: #ff3f9f;
+  text-decoration: none;
+}
+
+a:hover,
+.page-nav a:hover {
+  color: #c91578;
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: #ffd0ec !important;
+  border-color: #ffd0ec !important;
+  color: #ff40b3 !important;
+}
+
+.btn:hover {
+  background-color: #ff3f9f !important;
+  border-color: #ff3f9f !important;
+  color: #ffd6ef !important;
+}
+
+.card,
+.figure-img,
+section {
+  border-radius: 12px;
+}
+
+.page-nav {
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  background-color: #ffd5eb;
+}
